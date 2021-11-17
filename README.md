@@ -1,1 +1,2 @@
-# Sample_SemanticWeb
+# SemanticWeb
+Database and Web: Project 5

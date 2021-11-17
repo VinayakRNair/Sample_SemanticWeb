@@ -1,0 +1,186 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Python-SPARQL API to run SPARQL queries against the Ontologies and embed these into Python-Flask RESTful Services",
+    "version": "1.0.0",
+    "title": "Database and Web - Project 5"
+  },
+  "host": "localhost:5000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/periodictable/classifications/": {
+      "get": {
+        "tags": [
+          "classification filter"
+        ],
+        "summary": "Get all possible classification options of elements for filter.",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns a list of all classifications"
+          }
+        }
+      }
+    },
+    "/periodictable/standard_states/": {
+      "get": {
+        "tags": [
+          "state filter"
+        ],
+        "summary": "Get all possible state options of elements for filter.",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns a list of all states."
+          }
+        }
+      }
+    },
+    "/periodictable/blocks/": {
+      "get": {
+        "tags": [
+          "block filter"
+        ],
+        "summary": "Get all possible block options of elements for filter.",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns a list of all block."
+          }
+        }
+      }
+    },
+    "/periodictable/groups/": {
+      "get": {
+        "tags": [
+          "group filter"
+        ],
+        "summary": "Get all possible group options of elements for filter.",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns a list of all groups."
+          }
+        }
+      }
+    },
+    "/periodictable/periods/": {
+      "get": {
+        "tags": [
+          "period filter"
+        ],
+        "summary": "Get all possible period options of elements for filter.",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns a list of all periods."
+          }
+        }
+      }
+    },
+    "/periodictable/element/{sym}": {
+      "get": {
+        "tags": [
+          "specific element details"
+        ],
+        "summary": "Get all possible details of element.",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "sym",
+            "in": "path",
+            "description": "The symbol of the element whose details is required. ",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the detail of the element whose symbol is entered."
+          }
+        }
+      }
+    },
+    "/periodictable/elements/": {
+      "get": {
+        "tags": [
+          "all elements"
+        ],
+        "summary": "Get all possible period options of elements for filter.",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns a list of all the elements of the periodic table."
+          }
+        }
+      }
+    },
+    "/periodictable/element/fetch": {
+      "post": {
+        "tags": [
+          "filtered elements"
+        ],
+        "summary": "Fetch the filtered elements",
+        "description": "When the user applies the filters in the UI and hit the search button, this call will be made to get the elements that matches the applied filters.",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "elements",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "classification": {
+                  "type": "string"
+                },
+                "standard_state": {
+                  "type": "string"
+                },
+                "block": {
+                  "type": "string"
+                },
+                "group": {
+                  "type": "string"
+                },
+                "period": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "successful operation"
+          }
+        }
+      }
+    }
+  }
+}

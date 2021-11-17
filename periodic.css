@@ -1,0 +1,100 @@
+*{
+     font-family: verdana;
+     font-size: 15px;
+     text-align: center;
+}
+h1, body, option{
+       text-align: center;
+       background-color: #e3e3e3;
+}
+h1{
+    font-size:30px;
+    text-decoration: underline;
+}
+tr,td{
+    border: 1px solid black;
+    padding: 18px;
+}
+
+th{
+    font-size: 20px;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+p{
+    text-align:center;
+    font-size:20px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.hidecell{
+    border:1px solid #e3e3e3;
+}
+
+.hidden{
+    pointer-events: none;
+    text-decoration: none;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover, active{
+     color: black;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  font-size: 15px;
+  font-family: verdana;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.sb{
+    background-color: pink;
+}
+
+.pb{
+    background-color: #96dbe0;
+}
+
+.db{
+    background-color: #f8ff6b;
+}
+
+.fb{
+     background-color: #5cff6c;
+}
